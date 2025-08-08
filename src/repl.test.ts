@@ -6,7 +6,14 @@ describe.each([
 		input: "  hello  world  ",
 		expected: ["hello", "world"],
 	},
-	// TODO: more test cases here
+	{
+		input: "Charmander Bulbasaur PIKACHU",
+		expected: ["charmander", "bulbasaur", "pikachu"],
+	},
+	{
+		input: "   Hello there   ",
+		expected: ["hello", "there"],
+	},
 ])( "cleanInput($input)", ({ input, expected }) => {
 	test(`Expected: ${expected}`, () => {
 		const actual = cleanInput(input);
